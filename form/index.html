@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Strategy Call - Alymize</title>
+<meta name="description" content="Get in touch with Alymize. Fill in your details and we'll reach out within 24 hours." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+:root{
+  --bg-main:#FDF9F5;
+  --bg-2:#FFFFFF;
+  --pink-neon:#FF2E93;
+  --yellow-sun:#FFDE00;
+  --green-acid:#10B981;
+  --orange-pop:#FF6B35;
+  --red-fire:#EF4444;
+  --blue-pop:#3B82F6;
+  --violet:#7C3AED;
+  --ink-dark:#0B0F19;
+  --muted:#4A4458;
+  --muted-dim:#8A8296;
+  --glass-bg:rgba(255,255,255,.75);
+  --pink-dim:#FFE3F1;
+  --yellow-dim:#FFF6C2;
+  --green-dim:#DAFBEE;
+  --orange-dim:#FFE4D6;
+  --violet-dim:#EDE4FF;
+  --blue-dim:#DCEBFF;
+  --r-sm:12px; --r-md:24px; --r-lg:50px; --r-xl:36px;
+  --fd:'Space Grotesk',sans-serif; --fn:'Inter',system-ui,sans-serif; --fm:'JetBrains Mono',monospace;
+  --sh:4px 4px 0px 0px var(--ink-dark);
+  --sh-lg:8px 8px 0px 0px var(--ink-dark);
+  --sh-hover:10px 10px 0px 0px var(--ink-dark);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg-main); color:var(--ink-dark); font-family:var(--fn);
+  line-height:1.65; -webkit-font-smoothing:antialiased; font-size:16px;
+  min-height:100vh; width:100%; position:relative;
+  display:flex; align-items:center; justify-content:center;
+  padding:0;
+}
+body::before{
+  content:''; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5;
+  background-image:radial-gradient(rgba(11,15,25,.06) 1.6px,transparent 1.6px);
+  background-size:26px 26px;
+}
+a{color:inherit;text-decoration:none;}
+h1,h2{font-family:var(--fd);font-weight:800;letter-spacing:-0.02em;color:var(--ink-dark);}
+
+/* ---------- BLOBS ---------- */
+.blob{position:fixed;border-radius:50%;filter:blur(46px);pointer-events:none;z-index:-1;animation:float 7s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0) translateX(0) scale(1);}50%{transform:translateY(-24px) translateX(14px) scale(1.06);}}
+.blob.b-pink{background:radial-gradient(circle,rgba(255,46,147,.28) 0%,rgba(255,46,147,0) 70%);width:280px;height:280px;top:-40px;left:-40px;}
+.blob.b-yellow{background:radial-gradient(circle,rgba(255,222,0,.35) 0%,rgba(255,222,0,0) 70%);width:240px;height:240px;bottom:-30px;right:6%;animation-delay:1.4s;}
+.blob.b-green{background:radial-gradient(circle,rgba(16,185,129,.28) 0%,rgba(16,185,129,0) 70%);width:200px;height:200px;bottom:20%;left:4%;animation-delay:2.6s;}
+
+/* ---------- TAG ---------- */
+.tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dark);background:var(--pink-dim);border:2.5px solid var(--ink-dark);padding:8px 16px;border-radius:30px;margin-bottom:18px;box-shadow:3px 3px 0px 0px var(--ink-dark);}
+
+/* ---------- CARD (full screen, no popup box) ---------- */
+.form-card{
+  width:100%;
+  min-height:100vh;
+  max-width:720px;
+  margin:0 auto;
+  background:transparent;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  backdrop-filter:none; -webkit-backdrop-filter:none;
+  padding:60px 34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  z-index:1;
+}
+.back-link{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--fn); font-weight:700; font-size:13px; color:var(--ink-dark);
+  margin-bottom:20px;
+}
+.back-link:hover{color:var(--pink-neon);}
+
+.form-header{margin-bottom:26px;}
+.form-header .icon-badge{
+  width:44px;height:44px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--pink-neon); border:2.5px solid var(--ink-dark);
+  box-shadow:3px 3px 0px 0px var(--ink-dark);
+  margin-bottom:14px;
+}
+.form-header h1{font-size:clamp(24px,3.4vw,32px);margin-bottom:8px;line-height:1.15;text-transform:uppercase;}
+.form-header p{color:var(--muted);font-size:14.5px;font-weight:500;}
+
+.contact-row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 26px;}
+.contact-chip{
+  display:flex;align-items:center;gap:9px;
+  background:var(--bg-2); border:2px solid var(--ink-dark);
+  border-radius:30px; padding:8px 16px 8px 10px;
+  font-size:12.5px; font-weight:700; color:var(--ink-dark);
+  box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);
+}
+.contact-chip .ci{
+  width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  border:2px solid var(--ink-dark);
+}
+.contact-chip .ci.pink{background:var(--pink-dim);}
+.contact-chip .ci.green{background:var(--green-dim);}
+
+.form-label{
+  font-family:var(--fm); font-size:11px; font-weight:800; text-transform:uppercase;
+  letter-spacing:.1em; color:var(--muted-dim); display:block; margin-bottom:7px;
+}
+.form-group{margin-bottom:18px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-input, .form-textarea{
+  width:100%; border:2.5px solid var(--ink-dark); border-radius:14px;
+  padding:0 16px; font-size:14.5px; font-family:var(--fn); font-weight:600;
+  color:var(--ink-dark); background:var(--bg-2);
+  transition:all .2s ease; outline:none;
+}
+.form-input{height:50px;}
+.form-textarea{min-height:120px; padding:14px 16px; resize:vertical; line-height:1.6;}
+.form-input:focus, .form-textarea:focus{
+  border-color:var(--pink-neon);
+  box-shadow:4px 4px 0px 0px var(--ink-dark);
+  transform:translate(-2px,-2px);
+}
+.form-input::placeholder, .form-textarea::placeholder{color:var(--muted-dim); font-weight:500;}
+
+.submit-btn{
+  width:100%;
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  font-family:var(--fn); font-weight:800; font-size:15.5px;
+  padding:17px; border-radius:var(--r-lg);
+  border:3px solid var(--ink-dark); cursor:pointer;
+  background:var(--pink-neon); color:#fff;
+  box-shadow:var(--sh); transition:all .15s ease;
+  margin-top:6px;
+}
+.submit-btn:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0px 0px var(--ink-dark);background:var(--orange-pop);}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+
+.error-box{
+  background:var(--bg-2); border:2.5px solid var(--red-fire); border-radius:14px;
+  padding:14px 18px; font-size:13.5px; font-weight:600; color:var(--red-fire);
+  margin-bottom:20px; box-shadow:3px 3px 0px 0px var(--ink-dark);
+  display:none;
+}
+.error-box div{margin-bottom:4px;}
+.error-box div:last-child{margin-bottom:0;}
+
+/* ---------- SUCCESS ---------- */
+.success-wrap{text-align:center; display:none;}
+.success-icon{
+  width:70px;height:70px;margin:0 auto 22px;border-radius:50%;
+  background:var(--green-dim); border:3px solid var(--ink-dark);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:4px 4px 0px 0px var(--ink-dark);
+}
+.success-wrap h2{font-size:clamp(24px,3.4vw,30px);margin-bottom:10px;text-transform:uppercase;}
+.success-wrap p{color:var(--muted);font-size:14.5px;font-weight:500;margin-bottom:28px;line-height:1.8;}
+
+@media(max-width:560px){
+  .form-card{padding:40px 22px;}
+  .form-row{grid-template-columns:1fr;gap:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="blob b-pink"></div>
+<div class="blob b-yellow"></div>
+<div class="blob b-green"></div>
+
+<div class="form-card">
+
+  <!-- SUCCESS SCREEN (shown via JS after successful submit) -->
+  <div class="success-wrap" id="successWrap">
+    <div class="success-icon">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0B0F19" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <span class="tag" style="background:var(--green-dim);">Success</span>
+    <h2>Thank You!</h2>
+    <p>Your details have been submitted. Our team will reach out to you within 24 hours.</p>
+    <a href="https://alymize.com/" class="submit-btn" style="max-width:280px;margin:0 auto;">
+      <i class="fa-solid fa-arrow-left" style="font-size:13px"></i> Back to Home
+    </a>
+  </div>
+
+  <!-- FORM SCREEN -->
+  <div id="formWrap">
+
+    <div class="form-header">
+      <h1>Have a Project<br>in Mind?</h1>
+      <p>Fill in your details and we'll reach out within 24 hours.</p>
+    </div>
+
+    <div class="error-box" id="errorBox"></div>
+
+    <form id="leadForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input name="name" id="fName" class="form-input" placeholder="Your name" required/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone</label>
+          <input name="phone" id="fPhone" type="tel" class="form-input" placeholder="+91 98765 43210" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input name="email" id="fEmail" type="email" class="form-input" placeholder="your@email.com" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea name="message" id="fMessage" class="form-textarea" placeholder="Tell us about your goals..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <span id="submitBtnText">Submit</span>
+      </button>
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var WEB3FORMS_ACCESS_KEY = '815fb1d7-bdba-424f-981d-e3ae3dc4fea3';
+
+  var leadForm    = document.getElementById('leadForm');
+  var formWrap    = document.getElementById('formWrap');
+  var successWrap = document.getElementById('successWrap');
+  var errorBox    = document.getElementById('errorBox');
+  var submitBtn   = document.getElementById('submitBtn');
+  var submitBtnText = document.getElementById('submitBtnText');
+
+  function showErrors(list) {
+    errorBox.innerHTML = '';
+    list.forEach(function (msg) {
+      var div = document.createElement('div');
+      div.textContent = '• ' + msg;
+      errorBox.appendChild(div);
+    });
+    errorBox.style.display = 'block';
+  }
+
+  function clearErrors() {
+    errorBox.style.display = 'none';
+    errorBox.innerHTML = '';
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  leadForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    clearErrors();
+
+    var name    = document.getElementById('fName').value.trim();
+    var phone   = document.getElementById('fPhone').value.trim();
+    var email   = document.getElementById('fEmail').value.trim();
+    var message = document.getElementById('fMessage').value.trim();
+
+    var errors = [];
+    if (name === '')    errors.push('Name is required.');
+    if (phone === '')   errors.push('Phone is required.');
+    if (email === '' || !validateEmail(email)) errors.push('A valid email is required.');
+    if (message === '') errors.push('Message is required.');
+
+    if (errors.length > 0) {
+      showErrors(errors);
+      return;
+    }
+
+    // Disable button while submitting
+    submitBtn.disabled = true;
+    submitBtnText.textContent = 'Submitting...';
+
+    var fd = new FormData(leadForm);
+    fd.append('access_key', WEB3FORMS_ACCESS_KEY);
+    fd.append('subject', 'New Lead from Alymize Website');
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: fd,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Submit';
+
+        if (data.success) {
+          formWrap.style.display = 'none';
+          successWrap.style.display = 'block';
+        } else {
+          showErrors([data.message || 'Something went wrong. Please try again.']);
+        }
+      })
+      .catch(function (err) {
+        console.error('Web3Forms submit failed:', err);
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Submit';
+        showErrors(['Network error. Please check your connection and try again.']);
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
