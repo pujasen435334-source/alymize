@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Alymize</title>
+<meta name="description" content="Alymize Privacy Policy - how we collect, use, and protect your data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+:root{
+  --bg-main:#FDF9F5;
+  --bg-2:#FFFFFF;
+  --pink-neon:#FF2E93;
+  --yellow-sun:#FFDE00;
+  --green-acid:#10B981;
+  --orange-pop:#FF6B35;
+  --red-fire:#EF4444;
+  --blue-pop:#3B82F6;
+  --violet:#7C3AED;
+  --ink-dark:#0B0F19;
+  --muted:#4A4458;
+  --muted-dim:#8A8296;
+  --glass-bg:rgba(255,255,255,.75);
+  --pink-dim:#FFE3F1;
+  --yellow-dim:#FFF6C2;
+  --green-dim:#DAFBEE;
+  --orange-dim:#FFE4D6;
+  --violet-dim:#EDE4FF;
+  --blue-dim:#DCEBFF;
+  --r-sm:12px; --r-md:24px; --r-lg:50px; --r-xl:36px;
+  --fd:'Space Grotesk',sans-serif; --fn:'Inter',system-ui,sans-serif; --fm:'JetBrains Mono',monospace;
+  --sh:4px 4px 0px 0px var(--ink-dark);
+  --sh-lg:8px 8px 0px 0px var(--ink-dark);
+  --sh-hover:10px 10px 0px 0px var(--ink-dark);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg-main); color:var(--ink-dark); font-family:var(--fn);
+  line-height:1.65; -webkit-font-smoothing:antialiased; font-size:16px; position:relative; overflow-x:hidden;
+}
+body::before{
+  content:''; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.5;
+  background-image:radial-gradient(rgba(11,15,25,.06) 1.6px,transparent 1.6px);
+  background-size:26px 26px;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:900px;margin:0 auto;padding:0 22px;}
+section{padding:70px 0;position:relative;}
+.tc{text-align:center;}
+
+.tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--fm);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dark);background:var(--green-dim);border:2.5px solid var(--ink-dark);padding:8px 16px;border-radius:30px;margin-bottom:20px;box-shadow:3px 3px 0px 0px var(--ink-dark);}
+.tag.violet{background:var(--violet-dim);}
+.tag.blue{background:var(--blue-dim);}
+
+h1{font-family:var(--fd);font-size:clamp(30px,5vw,50px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:var(--ink-dark);text-transform:uppercase;margin-bottom:14px;}
+h2{font-family:var(--fd);font-size:clamp(20px,2.6vw,26px);font-weight:800;line-height:1.2;letter-spacing:-0.01em;color:var(--ink-dark);margin-bottom:12px;}
+.lead{font-size:15.5px;color:var(--muted);line-height:1.85;}
+.updated-pill{display:inline-flex;align-items:center;gap:8px;background:var(--bg-2);border:2px solid var(--ink-dark);padding:6px 14px;border-radius:30px;font-family:var(--fm);font-size:11px;font-weight:700;color:var(--muted);box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);margin-top:18px;}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--fn);font-weight:800;font-size:14px;padding:13px 24px;border-radius:var(--r-lg);border:3px solid var(--ink-dark);cursor:pointer;transition:all .15s ease;box-shadow:var(--sh);}
+.btn-primary{background:var(--pink-neon);color:#fff;}
+.btn-primary:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0px 0px var(--ink-dark);}
+
+/* NAV (matches main site) */
+.nav{position:sticky;top:14px;z-index:100;background:var(--glass-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:3px solid var(--ink-dark);border-radius:var(--r-lg);width:95%;max-width:1180px;margin:0 auto;box-shadow:var(--sh-lg);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;padding:0 22px 0 26px;}
+.nav-left{display:flex;align-items:center;gap:16px;}
+.nav-logo-fallback{font-family:var(--fd);font-size:20px;font-weight:800;letter-spacing:-0.02em;}
+.nav-links{display:none;align-items:center;gap:26px;}
+.nav-links a{font-family:var(--fn);font-weight:700;font-size:13px;color:var(--ink-dark);position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--pink-neon);transition:width .2s;}
+.nav-links a:hover::after{width:100%;}
+@media(min-width:900px){.nav-links{display:flex;}}
+.menu-btn{width:40px;height:40px;border-radius:50%;border:2.5px solid var(--ink-dark);background:var(--bg-2);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);}
+@media(min-width:900px){.menu-btn{display:none;}}
+.mobile-menu{display:none;flex-direction:column;gap:6px;padding:16px 22px 20px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:var(--fn);font-weight:700;font-size:14px;color:var(--ink-dark);padding:10px 4px;border-bottom:2px dashed var(--ink-dark);}
+.mobile-menu a:last-child{border-bottom:none;}
+.nav-book-btn{display:none;}
+@media(min-width:900px){.nav-book-btn{display:inline-flex;}}
+.nav .btn-primary{font-size:12px;padding:9px 18px;gap:6px;box-shadow:3px 3px 0px 0px var(--ink-dark);}
+
+/* POLICY CONTENT BLOCKS */
+.policy-block{background:var(--bg-2);border:3px solid var(--ink-dark);border-radius:var(--r-md);padding:28px 30px;margin-bottom:22px;box-shadow:var(--sh);}
+.policy-block:nth-child(4n+1){background:var(--blue-dim);}
+.policy-block:nth-child(4n+2){background:var(--pink-dim);}
+.policy-block:nth-child(4n+3){background:var(--green-dim);}
+.policy-block:nth-child(4n+4){background:var(--yellow-dim);}
+.policy-num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--ink-dark);color:#fff;font-family:var(--fd);font-weight:800;font-size:14px;border:2px solid var(--ink-dark);box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);margin-right:12px;flex-shrink:0;}
+.policy-head{display:flex;align-items:center;margin-bottom:12px;}
+.policy-block p{font-size:14px;color:var(--muted);line-height:1.85;font-weight:500;margin-bottom:10px;}
+.policy-block p:last-child{margin-bottom:0;}
+.policy-block ul{margin:8px 0 10px 0;padding-left:0;list-style:none;}
+.policy-block ul li{font-size:14px;color:var(--muted);line-height:1.8;font-weight:500;padding-left:22px;position:relative;margin-bottom:8px;}
+.policy-block ul li::before{content:'';position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--pink-neon);border:1.5px solid var(--ink-dark);border-radius:50%;}
+
+/* TOC */
+.toc{background:var(--bg-2);border:3px solid var(--ink-dark);border-radius:var(--r-md);padding:22px 26px;margin-bottom:40px;box-shadow:var(--sh);}
+.toc h4{font-family:var(--fm);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-dim);margin-bottom:14px;font-weight:700;}
+.toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;counter-reset:toc-counter;}
+.toc li{counter-increment:toc-counter;font-size:13.5px;font-weight:700;}
+.toc li a{display:flex;align-items:center;gap:9px;color:var(--ink-dark);}
+.toc li a::before{content:counter(toc-counter);width:22px;height:22px;border-radius:6px;background:var(--yellow-sun);border:2px solid var(--ink-dark);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:11px;flex-shrink:0;}
+.toc li a:hover{color:var(--pink-neon);}
+@media(max-width:600px){.toc ol{grid-template-columns:1fr;}}
+
+/* FOOTER (matches main site) */
+footer{border-top:3px solid var(--ink-dark);padding:56px 0 26px;background:var(--bg-2);margin-top:20px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px;margin-bottom:38px;}
+.footer-desc{font-size:12.5px;color:var(--muted);line-height:1.75;}
+.fc-title{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted-dim);margin-bottom:15px;font-weight:700;}
+.fc-links{list-style:none;}
+.fc-links li{margin-bottom:9px;}
+.fc-links a{font-size:13.5px;color:var(--muted);transition:color .2s;font-weight:600;}
+.fc-links a:hover{color:var(--pink-neon);}
+.foot-socials{display:flex;gap:10px;}
+.foot-socials a{width:38px;height:38px;border-radius:10px;border:2px solid var(--ink-dark);display:flex;align-items:center;justify-content:center;background:var(--bg-2);box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);transition:all .15s ease;}
+.foot-socials a:hover{background:var(--yellow-sun);transform:translate(-2px,-2px);box-shadow:4px 4px 0px 0px var(--ink-dark);}
+.foot-socials .fa-linkedin{color:#0A66C2;}
+.foot-socials .fa-twitter{color:#1DA1F2;}
+.foot-socials .fa-instagram{
+  background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+}
+.foot-bottom{border-top:2px solid var(--ink-dark);padding-top:22px;text-align:center;font-size:11px;color:var(--muted-dim);font-family:var(--fm);}
+@media(max-width:700px){.footer-grid{grid-template-columns:1fr;}}
+
+@media(max-width:600px){
+  section{padding:50px 0;}
+  .policy-block{padding:22px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="nav-left">
+      <a href="index.html" style="display:flex;align-items:center;">
+        <img src="https://i.ibb.co/BKY6sWvS/20260717-024403.png" alt="Alymize" style="height:36px;width:auto;object-fit:contain;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=&quot;nav-logo-fallback&quot;>Alymize</span>')">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html#features">Services</a>
+      <a href="index.html#why">Why Alymize?</a>
+      <a href="index.html#team">Our Team</a>
+      <a href="index.html#faq">FAQs</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="https://alymize.com/form.html" class="btn btn-primary nav-book-btn">Book a Call</a>
+      <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars" style="font-size:13px;"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#features">Services</a>
+    <a href="index.html#why">Why Alymize?</a>
+    <a href="index.html#team">Our Team</a>
+    <a href="index.html#faq">FAQs</a>
+    <a href="https://alymize.com/form.html" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Book a Strategy Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="padding:60px 0 20px;">
+  <div class="wrap tc">
+    <span class="tag violet"><i class="fa-solid fa-shield-halved"></i> Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="lead" style="max-width:560px;margin:0 auto;">This policy explains what information Alymize collects, how we use it, and the choices you have — in plain language, no legal jargon.</p>
+    <div class="updated-pill"><i class="fa-solid fa-clock"></i> Last updated: July 17, 2026</div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section style="padding-top:20px;">
+  <div class="wrap">
+
+    <div class="toc">
+      <h4>On this page</h4>
+      <ol>
+        <li><a href="#s1">Information we collect</a></li>
+        <li><a href="#s2">How we use your information</a></li>
+        <li><a href="#s3">Cookies & tracking</a></li>
+        <li><a href="#s4">Third-party sharing</a></li>
+        <li><a href="#s5">Data security</a></li>
+        <li><a href="#s6">Your rights & choices</a></li>
+        <li><a href="#s7">Data retention</a></li>
+        <li><a href="#s8">Contact us</a></li>
+      </ol>
+    </div>
+
+    <div class="policy-block" id="s1">
+      <div class="policy-head"><span class="policy-num">1</span><h2>Information We Collect</h2></div>
+      <p>When you interact with Alymize — through our website, a strategy call, or a client project — we may collect the following:</p>
+      <ul>
+        <li><strong>Contact details:</strong> name, email address, phone number, and company name when you fill out a form or book a call.</li>
+        <li><strong>Business information:</strong> details about your brand, ad accounts, and marketing goals shared during onboarding.</li>
+        <li><strong>Usage data:</strong> pages visited, device type, browser, and approximate location, collected automatically via analytics tools.</li>
+        <li><strong>Ad platform data:</strong> performance metrics from connected accounts (Meta, Google Ads, etc.) needed to manage your campaigns.</li>
+      </ul>
+    </div>
+
+    <div class="policy-block" id="s2">
+      <div class="policy-head"><span class="policy-num">2</span><h2>How We Use Your Information</h2></div>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to inquiries and schedule strategy calls.</li>
+        <li>Plan, launch, and optimize advertising campaigns on your behalf.</li>
+        <li>Send performance reports, invoices, and account updates.</li>
+        <li>Improve our website, services, and internal processes.</li>
+        <li>Meet legal and tax obligations where required.</li>
+      </ul>
+      <p>We never sell your personal data to third parties.</p>
+    </div>
+
+    <div class="policy-block" id="s3">
+      <div class="policy-head"><span class="policy-num">3</span><h2>Cookies & Tracking</h2></div>
+      <p>Our website uses cookies and similar technologies to remember your preferences, understand how visitors use the site, and measure the performance of our own marketing campaigns. You can disable cookies anytime through your browser settings; some site features may work differently as a result.</p>
+    </div>
+
+    <div class="policy-block" id="s4">
+      <div class="policy-head"><span class="policy-num">4</span><h2>Third-Party Sharing</h2></div>
+      <p>We work with trusted platforms and partners to deliver our services, including:</p>
+      <ul>
+        <li>Advertising platforms (Meta, Google, TikTok, LinkedIn) to run and report on your campaigns.</li>
+        <li>Analytics providers to understand website and campaign performance.</li>
+        <li>Payment processors to handle invoices and billing securely.</li>
+      </ul>
+      <p>These partners only receive the information necessary to perform their specific function and are bound by their own privacy and security obligations.</p>
+    </div>
+
+    <div class="policy-block" id="s5">
+      <div class="policy-head"><span class="policy-num">5</span><h2>Data Security</h2></div>
+      <p>We use reasonable technical and organizational measures — including access controls, encrypted storage, and restricted internal access — to protect your data against unauthorized access, loss, or misuse. No method of transmission over the internet is 100% secure, but we work continuously to keep your information safe.</p>
+    </div>
+
+    <div class="policy-block" id="s6">
+      <div class="policy-head"><span class="policy-num">6</span><h2>Your Rights & Choices</h2></div>
+      <p>Depending on where you're located, you may have the right to:</p>
+      <ul>
+        <li>Request a copy of the personal data we hold about you.</li>
+        <li>Ask us to correct or update inaccurate information.</li>
+        <li>Request deletion of your data, subject to legal or contractual obligations.</li>
+        <li>Opt out of marketing emails at any time via the unsubscribe link.</li>
+      </ul>
+      <p>To exercise any of these rights, reach out using the contact details below.</p>
+    </div>
+
+    <div class="policy-block" id="s7">
+      <div class="policy-head"><span class="policy-num">7</span><h2>Data Retention</h2></div>
+      <p>We retain personal and campaign data for as long as needed to provide our services and meet legal, accounting, or reporting requirements. Once data is no longer needed, we securely delete or anonymize it.</p>
+    </div>
+
+    <div class="policy-block" id="s8">
+      <div class="policy-head"><span class="policy-num">8</span><h2>Contact Us</h2></div>
+      <p>If you have questions about this policy or how your data is handled, reach out to us:</p>
+      <p><i class="fa-solid fa-envelope" style="color:var(--pink-neon);margin-right:8px;"></i>hello@alymize.com</p>
+      <p><i class="fa-solid fa-location-dot" style="color:var(--pink-neon);margin-right:8px;"></i>We'll respond to privacy-related requests within a reasonable timeframe.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap" style="max-width:1120px;">
+    <div class="footer-grid">
+      <div>
+        <img src="https://i.ibb.co/BKY6sWvS/20260717-024403.png" alt="Alymize" style="height:34px;width:auto;margin-bottom:14px;object-fit:contain;" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=&quot;nav-logo-fallback&quot;>Alymize</div>')">
+        <p class="footer-desc">A dedicated team of specialists, delivering remarkable work to our clients worldwide — performance marketing, design, and automation, all in one place.</p>
+      </div>
+      <div>
+        <div class="fc-title">Company</div>
+        <ul class="fc-links">
+          <li><a href="index.html#features">Services</a></li>
+          <li><a href="index.html#why">Why Alymize?</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fc-title">Connect</div>
+        <div class="foot-socials">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Alymize. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>{mobileMenu.classList.toggle('open');});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+</script>
+</body>
+</html>
