@@ -382,19 +382,39 @@ h1{margin-bottom:20px;}
 
 
 /* ---------- FOOTER ---------- */
-footer{border-top:3px solid var(--ink-dark);padding:56px 0 26px;background:var(--bg-2);}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px;margin-bottom:38px;}
-.footer-desc{font-size:12.5px;color:var(--muted);line-height:1.75;}
-.fc-title{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted-dim);margin-bottom:15px;font-weight:700;}
+footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--ink-dark);color:#EDEBF3;}
+.foot-top{padding:64px 0 40px;}
+.foot-brand-row{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12);}
+.foot-brand-col{max-width:340px;}
+.footer-desc{font-size:13px;color:#B7B2C6;line-height:1.8;margin-top:14px;}
+.foot-trust{display:flex;align-items:center;gap:10px;margin-top:22px;flex-wrap:wrap;}
+.foot-trust-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#EDEBF3;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:20px;}
+.foot-trust-badge i{color:var(--green-acid);}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:38px;margin-bottom:8px;}
+.fc-title{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:#8A83A0;margin-bottom:17px;font-weight:700;}
 .fc-links{list-style:none;}
-.fc-links li{margin-bottom:9px;}
-.fc-links a{font-size:13.5px;color:var(--muted);transition:color .2s;font-weight:600;}
-.fc-links a:hover{color:var(--pink-neon);}
-.foot-socials{display:flex;gap:10px;}
-.foot-socials a{width:38px;height:38px;border-radius:10px;border:2px solid var(--ink-dark);display:flex;align-items:center;justify-content:center;background:var(--bg-2);box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);transition:all .15s ease;}
-.foot-socials a:hover{background:var(--yellow-sun);transform:translate(-2px,-2px);box-shadow:4px 4px 0px 0px var(--ink-dark);}
-.foot-bottom{border-top:2px solid var(--ink-dark);padding-top:22px;text-align:center;font-size:11px;color:var(--muted-dim);font-family:var(--fm);}
-@media(max-width:700px){.footer-grid{grid-template-columns:1fr;}}
+.fc-links li{margin-bottom:11px;}
+.fc-links a{font-size:13.5px;color:#CFCADC;transition:color .2s,padding-left .2s;font-weight:500;display:inline-block;}
+.fc-links a:hover{color:#fff;padding-left:3px;}
+.foot-socials{display:flex;gap:10px;margin-top:18px;}
+.foot-socials a{width:36px;height:36px;border-radius:10px;border:1.5px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);transition:all .15s ease;color:#EDEBF3;}
+.foot-socials a:hover{background:var(--pink-neon);border-color:var(--pink-neon);transform:translateY(-2px);}
+.foot-socials .fa-linkedin,.foot-socials .fa-github,.foot-socials .fa-twitter{color:#EDEBF3;}
+.foot-socials .fa-instagram{background:none;-webkit-text-fill-color:#EDEBF3;color:#EDEBF3;}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;text-align:center;font-size:11.5px;color:#8A83A0;font-family:var(--fm);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.foot-bottom-links{display:flex;gap:18px;flex-wrap:wrap;}
+.foot-bottom-links a{color:#8A83A0;transition:color .2s;}
+.foot-bottom-links a:hover{color:#fff;}
+
+/* ---------- FOOTER: TRUSTED BY BRANDS STRIP ---------- */
+.foot-clients{margin-bottom:44px;}
+.foot-clients-label{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:#8A83A0;font-weight:700;margin-bottom:18px;}
+.foot-clients-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;}
+.foot-clients-row span{font-family:var(--fd);font-weight:700;font-size:16.5px;color:#B7B2C6;letter-spacing:-.01em;opacity:.85;transition:opacity .2s,color .2s;}
+.foot-clients-row span:hover{opacity:1;color:#fff;}
+
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px 20px;}.foot-brand-row{flex-direction:column;}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr 1fr;}.foot-bottom{flex-direction:column;text-align:center;}}
 
 /* ---------- WHATSAPP FLOAT ---------- */
 .wa{position:fixed;bottom:24px;right:24px;z-index:90;width:58px;height:58px;border-radius:50%;background:var(--ink-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;border:3px solid var(--ink-dark);box-shadow:5px 5px 0px 0px var(--ink-dark);transition:all .15s ease;}
@@ -795,32 +815,92 @@ footer{border-top:3px solid var(--ink-dark);padding:56px 0 26px;background:var(-
 
 <!-- FOOTER -->
 <footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <img src="https://i.ibb.co/4g0SNvC5/20260717-024403.png" alt="Alymize logo" style="height:34px;width:auto;margin-bottom:14px;object-fit:contain;" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=&quot;nav-logo-fallback&quot;>Alymize</div>')">
+  <div class="wrap foot-top">
+
+    <div class="foot-brand-row">
+      <div class="foot-brand-col">
+        <div class="nav-logo-fallback" style="color:#fff;">Alymize</div>
         <p class="footer-desc">A dedicated team of specialists, delivering remarkable work to our clients worldwide — performance marketing, design, and automation, all in one place.</p>
-      </div>
-      <div>
-        <div class="fc-title">Company</div>
-        <ul class="fc-links">
-          <li><a href="#features">Services</a></li>
-          <li><a href="#why">Why Alymize?</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#faq">FAQs</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="fc-title">Connect</div>
+        <div class="foot-trust">
+          <span class="foot-trust-badge"><i class="fa-solid fa-shield-halved"></i> Google Partner</span>
+          <span class="foot-trust-badge"><i class="fa-solid fa-shield-halved"></i> Meta Partner</span>
+        </div>
         <div class="foot-socials">
           <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
         </div>
       </div>
+
+      <div class="footer-grid" style="flex:1;max-width:640px;">
+        <div>
+          <div class="fc-title">Company</div>
+          <ul class="fc-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#why">Why Alymize?</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fc-title">Services</div>
+          <ul class="fc-links">
+            <li><a href="#features">Paid Marketing</a></li>
+            <li><a href="#features">Web Development</a></li>
+            <li><a href="#features">SEO</a></li>
+            <li><a href="#features">Social Media</a></li>
+            <li><a href="#features">Automation</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fc-title">Resources</div>
+          <ul class="fc-links">
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="form">Book a Call</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fc-title">Legal</div>
+          <ul class="fc-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-   </div>
+
+    <div class="foot-clients">
+      <div class="foot-clients-label">Trusted By Brands Like</div>
+      <div class="foot-clients-row">
+        <span>Amazon</span>
+        <span>Flipkart</span>
+        <span>Zomato</span>
+        <span>Swiggy</span>
+        <span>Myntra</span>
+        <span>Nykaa</span>
+        <span>boAt</span>
+        <span>Tata</span>
+        <span>PhonePe</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span>&copy; <span id="footYear"></span> Alymize. All Rights Reserved.</span>
+      <div class="foot-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
@@ -858,6 +938,8 @@ buildAccordion('faqList',[
   {q:'What platforms do you specialize in?',a:'We are full-funnel experts across Google Ads, Meta (Facebook/Instagram), TikTok, LinkedIn, and more. We align the platform strategy to where your ideal customers actually are.'},
   {q:'How long until we see ROI?',a:'Most clients see initial traction within 14-30 days, with significant scaling and optimized ROI between days 60-90 as our strategies learn and improve.'}
 ]);
+
+document.getElementById('footYear').textContent = new Date().getFullYear();
 
 /* ---------- SCROLL REVEAL OBSERVER ---------- */
 (function(){
