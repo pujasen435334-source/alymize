@@ -381,40 +381,40 @@ h1{margin-bottom:20px;}
 .cta-card p{color:rgba(255,255,255,.85);font-size:15px;max-width:540px;margin:0 auto 30px;line-height:1.8;font-weight:500;position:relative;z-index:1;}
 
 
-/* ---------- FOOTER ---------- */
-footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--ink-dark);color:#EDEBF3;}
-.foot-top{padding:64px 0 40px;}
-.foot-brand-row{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12);}
-.foot-brand-col{max-width:340px;}
-.footer-desc{font-size:13px;color:#B7B2C6;line-height:1.8;margin-top:14px;}
-.foot-trust{display:flex;align-items:center;gap:10px;margin-top:22px;flex-wrap:wrap;}
-.foot-trust-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#EDEBF3;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:20px;}
+/* ---------- FOOTER (light, modern, mobile-friendly) ---------- */
+footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--bg-2);color:var(--ink-dark);}
+.foot-top{padding:60px 0 34px;}
+.foot-brand-row{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px;padding-bottom:36px;border-bottom:2px dashed rgba(11,15,25,.14);}
+.foot-brand-col{max-width:320px;}
+.foot-logo-img{height:34px;width:auto;object-fit:contain;display:block;}
+.footer-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-top:14px;}
+.foot-trust{display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.foot-trust-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dark);background:var(--green-dim);border:1.5px solid var(--ink-dark);padding:6px 12px;border-radius:20px;}
 .foot-trust-badge i{color:var(--green-acid);}
-.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:38px;margin-bottom:8px;}
-.fc-title{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:#8A83A0;margin-bottom:17px;font-weight:700;}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-bottom:8px;}
+.fc-title{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted-dim);margin-bottom:15px;font-weight:700;}
 .fc-links{list-style:none;}
-.fc-links li{margin-bottom:11px;}
-.fc-links a{font-size:13.5px;color:#CFCADC;transition:color .2s,padding-left .2s;font-weight:500;display:inline-block;}
-.fc-links a:hover{color:#fff;padding-left:3px;}
+.fc-links li{margin-bottom:10px;}
+.fc-links a{font-size:13.5px;color:var(--muted);transition:color .2s,padding-left .2s;font-weight:600;display:inline-block;}
+.fc-links a:hover{color:var(--pink-neon);padding-left:3px;}
 .foot-socials{display:flex;gap:10px;margin-top:18px;}
-.foot-socials a{width:36px;height:36px;border-radius:10px;border:1.5px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);transition:all .15s ease;color:#EDEBF3;}
-.foot-socials a:hover{background:var(--pink-neon);border-color:var(--pink-neon);transform:translateY(-2px);}
-.foot-socials .fa-linkedin,.foot-socials .fa-github,.foot-socials .fa-twitter{color:#EDEBF3;}
-.foot-socials .fa-instagram{background:none;-webkit-text-fill-color:#EDEBF3;color:#EDEBF3;}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;text-align:center;font-size:11.5px;color:#8A83A0;font-family:var(--fm);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.foot-socials a{width:36px;height:36px;border-radius:10px;border:2px solid var(--ink-dark);display:flex;align-items:center;justify-content:center;background:var(--bg-2);box-shadow:2.5px 2.5px 0px 0px var(--ink-dark);transition:all .15s ease;color:var(--ink-dark);}
+.foot-socials a:hover{background:var(--yellow-sun);transform:translate(-2px,-2px);box-shadow:4px 4px 0px 0px var(--ink-dark);}
+.foot-bottom{border-top:2px solid var(--ink-dark);padding:20px 0;text-align:center;font-size:11.5px;color:var(--muted-dim);font-family:var(--fm);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
 .foot-bottom-links{display:flex;gap:18px;flex-wrap:wrap;}
-.foot-bottom-links a{color:#8A83A0;transition:color .2s;}
-.foot-bottom-links a:hover{color:#fff;}
+.foot-bottom-links a{color:var(--muted-dim);transition:color .2s;}
+.foot-bottom-links a:hover{color:var(--pink-neon);}
 
-/* ---------- FOOTER: TRUSTED BY BRANDS STRIP ---------- */
-.foot-clients{margin-bottom:44px;}
-.foot-clients-label{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:#8A83A0;font-weight:700;margin-bottom:18px;}
-.foot-clients-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;}
-.foot-clients-row span{font-family:var(--fd);font-weight:700;font-size:16.5px;color:#B7B2C6;letter-spacing:-.01em;opacity:.85;transition:opacity .2s,color .2s;}
-.foot-clients-row span:hover{opacity:1;color:#fff;}
-
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:30px 20px;}.foot-brand-row{flex-direction:column;}}
-@media(max-width:600px){.footer-grid{grid-template-columns:1fr 1fr;}.foot-bottom{flex-direction:column;text-align:center;}}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:26px 20px;}.foot-brand-row{flex-direction:column;}}
+@media(max-width:600px){
+  .foot-top{padding:44px 0 26px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:24px 16px;}
+  .foot-bottom{flex-direction:column;text-align:center;}
+  .foot-brand-row{margin-bottom:30px;padding-bottom:26px;}
+}
+@media(max-width:420px){
+  .footer-grid{grid-template-columns:1fr;gap:22px;}
+}
 
 /* ---------- WHATSAPP FLOAT ---------- */
 .wa{position:fixed;bottom:24px;right:24px;z-index:90;width:58px;height:58px;border-radius:50%;background:var(--ink-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;border:3px solid var(--ink-dark);box-shadow:5px 5px 0px 0px var(--ink-dark);transition:all .15s ease;}
@@ -819,7 +819,7 @@ footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--ink-dark)
 
     <div class="foot-brand-row">
       <div class="foot-brand-col">
-        <div class="nav-logo-fallback" style="color:#fff;">Alymize</div>
+        <img src="https://i.ibb.co/4g0SNvC5/20260717-024403.png" alt="Alymize logo" class="foot-logo-img" loading="lazy" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=&quot;nav-logo-fallback&quot;>Alymize</div>')">
         <p class="footer-desc">A dedicated team of specialists, delivering remarkable work to our clients worldwide — performance marketing, design, and automation, all in one place.</p>
         <div class="foot-trust">
           <span class="foot-trust-badge"><i class="fa-solid fa-shield-halved"></i> Google Partner</span>
@@ -871,21 +871,6 @@ footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--ink-dark)
             <li><a href="disclaimer.html">Disclaimer</a></li>
           </ul>
         </div>
-      </div>
-    </div>
-
-    <div class="foot-clients">
-      <div class="foot-clients-label">Trusted By Brands Like</div>
-      <div class="foot-clients-row">
-        <span>Amazon</span>
-        <span>Flipkart</span>
-        <span>Zomato</span>
-        <span>Swiggy</span>
-        <span>Myntra</span>
-        <span>Nykaa</span>
-        <span>boAt</span>
-        <span>Tata</span>
-        <span>PhonePe</span>
       </div>
     </div>
 
