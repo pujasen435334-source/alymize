@@ -384,11 +384,12 @@ h1{margin-bottom:20px;}
 /* ---------- FOOTER (light, modern, mobile-friendly) ---------- */
 footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--bg-2);color:var(--ink-dark);}
 .foot-top{padding:60px 0 34px;}
-.foot-brand-row{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px;padding-bottom:36px;border-bottom:2px dashed rgba(11,15,25,.14);}
-.foot-brand-col{max-width:320px;width:100%;}
+.foot-brand-row{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:40px;padding-bottom:36px;border-bottom:2px dashed rgba(11,15,25,.14);width:100%;}
+.foot-brand-col{max-width:320px;width:100%;min-width:0;}
 .foot-logo-img{height:34px;width:auto;object-fit:contain;display:block;}
 .footer-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-top:14px;}
 .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-bottom:8px;width:100%;}
+.footer-grid>div{min-width:0;}
 .fc-title{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted-dim);margin-bottom:15px;font-weight:700;}
 .fc-links{list-style:none;}
 .fc-links li{margin-bottom:10px;}
@@ -827,7 +828,7 @@ footer{border-top:3px solid var(--ink-dark);padding:0;background:var(--bg-2);col
         </div>
       </div>
 
-      <div class="footer-grid" style="flex:1;min-width:260px;">
+      <div class="footer-grid" style="flex:1;min-width:0;">
         <div>
           <div class="fc-title">Company</div>
           <ul class="fc-links">
